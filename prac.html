@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prac.css">
+    <title>Years</title>
+</head>
+<body>
+        <details>
+            <summary id="year" onmouseover="">Years as per updated</summary>
+            <div id="yearList" class="ctn">
+  <button id="addYear">Add Year</button>
+  <button id="removeYear">Remove Last Year</button>
+  <button id="sortYear">Sort Years</button>
+  <button id="clearYear">Clear All Years</button>
+  <input type="text" id="yearInput" placeholder="Enter Year (1900 - Current)">
+  <p id="message"></p>
+
+  <table id="yearsTable" style="display:none;">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  
+  <p id="countYears"></p>
+</div>
+
+
+        </details>
+        <script src="prac.js"></script>
+</body>
+</html>

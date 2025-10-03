@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PraRoz | Web Design Course</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <nav class="navbar">
+      <h2 class="logo">PraRoz</h2>
+
+      <!-- Hamburger Icon -->
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <i class="ri-menu-line"></i>
+      </button>
+
+      <ul class="nav-links" id="sidebar">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#service">SERVICE</a></li>
+        <li><a href="#design">DESIGN</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+
+      <div class="search">
+  <input type="text" placeholder="Search here..." id="searchInput" aria-label="Search">
+  <button class="clear-btn" type="button" aria-label="Clear input">
+    <i class="ri-close-line"></i>
+  </button>
+  <button class="btn search-btn" type="button" aria-label="Search">
+    <i class="ri-search-line"></i>
+  </button>
+</div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Web Design & <span>Development</span> Course</h1>
+        <p>
+          Web Design is a specialization of the design stream. It involves HTML, CSS,
+          WYSIWYG editors, and markup validation tools to create beautiful and functional websites.
+        </p>
+        <button class="btn">JOIN US</button>
+      </div>
+
+      <!-- Login Form -->
+      <form class="login-form" id="loginForm" method="post" action="#">
+        <h2>Login Here</h2>
+        <div class="form-group">
+          <input type="text" required placeholder="Enter Name Here" name="username" id="username">
+          <input type="password" required placeholder="Enter Password Here" name="password" id="password">
+        </div>
+        <button class="login-btn" type="submit">Login</button>
+        <p id="error" class="error-message">Please fill out all fields correctly.</p>
+        <p>Don't have an account? <a href="#">Sign up here</a></p>
+        <p>Log in with</p>
+        <div class="socials">
+          <a href="https://facebook.com" target="_blank"><i class="ri-facebook-fill"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="ri-instagram-line"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="ri-twitter-x-line"></i></a>
+          <a href="https://google.com" target="_blank"><i class="ri-google-fill"></i></a>
+          <a href="https://skype.com" target="_blank"><i class="ri-skype-line"></i></a>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="index.js" type="text/javascript" defer></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Default: transparent navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: transparent; /* Transparent by default */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+/* Add solid background when scrolled */
+.navbar.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a,
+.navbar .logo {
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar.scrolled a,
+.navbar.scrolled .logo {
+  color: #333;
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 1001;
+}
+
+/* Nav Links (Desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* === SEARCH CONTAINER === */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 10px;
+  border-radius: 999px; /* pill-style */
+  background: #fff;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  max-width: 300px;
+  position: relative;
+}
+
+.search input {
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  background: transparent;
+}
+
+/* SEARCH BUTTON */
+.search-btn {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.search-btn i {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+/* ANIMATE ON CLICK */
+.search-btn.clicked i {
+  transform: scale(1.2) rotate(15deg);
+}
+
+/* CLEAR BUTTON */
+.clear-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.1rem;
+  padding: 0 8px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  position: absolute;
+  right: 45px;
+}
+
+.clear-btn:hover {
+  color: #333;
+}
+
+/* === MOBILE STYLES === */
+@media (max-width: 768px) {
+  .search {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .search input {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .search-btn {
+    padding: 8px 10px;
+  }
+
+  .search-btn i {
+    font-size: 1rem;
+  }
+
+  .clear-btn {
+    right: 45px;
+  }
+}
+
+
+.btn {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hero-content {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #007bff;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Login Form */
+.login-form {
+  margin: 40px auto 0;
+  max-width: 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.socials a {
+  color: #333;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.socials a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+.error-message {
+  color: red;
+  display: none;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Sidebar Styles (Mobile) ====== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    left: 0;
+  }
+
+  /* .search {
+    flex-direction: column;
+    margin-top: 10px;
+  } */
+}
